@@ -46,7 +46,7 @@ const Skills: React.FC = () => {
         { name: 'HTML5/CSS3', icon: '🎨' },
         { name: 'Tailwind CSS', icon: '💨' },
         { name: 'Redux', icon: '🔄' },
-        { name: 'Vue.js', icon: '💚' }
+       
       ]
     },
     {
@@ -56,12 +56,11 @@ const Skills: React.FC = () => {
       skills: [
         { name: 'Node.js', icon: '🟢' },
         { name: 'Express.js', icon: '🚀' },
-        { name: 'Python', icon: '🐍' },
         { name: 'REST APIs', icon: '🔗' },
         { name: 'GraphQL', icon: '📊' },
         { name: 'Socket.io', icon: '⚡' },
         { name: 'JWT Auth', icon: '🔐' },
-        { name: 'Microservices', icon: '🏗️' }
+        
       ]
     },
     {
@@ -72,11 +71,9 @@ const Skills: React.FC = () => {
         { name: 'MongoDB', icon: '🍃' },
         { name: 'PostgreSQL', icon: '🐘' },
         { name: 'MySQL', icon: '🐬' },
-        { name: 'Redis', icon: '🔴' },
         { name: 'Firebase', icon: '🔥' },
-        { name: 'Prisma', icon: '💎' },
         { name: 'Mongoose', icon: '📊' },
-        { name: 'Supabase', icon: '⚡' }
+      
       ]
     },
     {
@@ -86,12 +83,11 @@ const Skills: React.FC = () => {
       skills: [
         { name: 'Git/GitHub', icon: '🐙' },
         { name: 'Docker', icon: '🐳' },
-        { name: 'AWS', icon: '☁️' },
         { name: 'Vercel', icon: '▲' },
         { name: 'Netlify', icon: '🌐' },
         { name: 'VS Code', icon: '💻' },
         { name: 'Postman', icon: '📮' },
-        { name: 'Linux', icon: '🐧' }
+       
       ]
     }
   ];
@@ -104,7 +100,7 @@ const Skills: React.FC = () => {
     },
     {
       icon: <Code className="w-6 h-6" />,
-      title: '50,000+ Lines of Code',
+      title: '70,000+ Lines of Code',
       description: 'Written across various projects'
     },
     {
@@ -114,8 +110,8 @@ const Skills: React.FC = () => {
     },
     {
       icon: <Cloud className="w-6 h-6" />,
-      title: '100% Deployment Success',
-      description: 'All projects successfully deployed'
+      title: 'Deployment Success',
+      description: ' projects deployed successfully'
     }
   ];
 

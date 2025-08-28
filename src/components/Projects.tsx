@@ -144,7 +144,7 @@ const Projects: React.FC = () => {
   const stats: Stat[] = [
     { 
       label: 'Total Projects', 
-      value: '4', 
+      value: '7', 
       icon: <Code className="w-5 h-5" /> 
     },
     { 
@@ -154,12 +154,12 @@ const Projects: React.FC = () => {
     },
     { 
       label: 'Development Time', 
-      value: '11.5 months', 
+      value: '21 months', 
       icon: <Calendar className="w-5 h-5" /> 
     },
     { 
       label: 'Lines of Code', 
-      value: '50K+', 
+      value: '100K+', 
       icon: <Users className="w-5 h-5" /> 
     }
   ];

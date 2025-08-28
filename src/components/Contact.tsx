@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter, MessageCircle } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter, MessageCircle, Instagram, Facebook } from 'lucide-react';
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -42,14 +42,14 @@ const Contact: React.FC = () => {
     {
       icon: <Mail className="w-6 h-6" />,
       title: 'Email',
-      value: 'naresh.shahi@example.com',
-      link: 'mailto:naresh.shahi@example.com',
+      value: 'nareshshahi0011@gmail.com',
+      link: 'mailto:nareshshahi0011@gmail.com',
       color: 'from-red-400 to-pink-400'
     },
     {
       icon: <Phone className="w-6 h-6" />,
       title: 'Phone',
-      value: '+977 98XXXXXXXX',
+      value: '+977 9864783641',
       link: 'tel:+97798XXXXXXXX',
       color: 'from-green-400 to-emerald-400'
     },
@@ -57,7 +57,7 @@ const Contact: React.FC = () => {
       icon: <MapPin className="w-6 h-6" />,
       title: 'Location',
       value: 'Kathmandu, Nepal',
-      link: '#',
+      link: 'https://www.google.com/maps/place/Kapan,+Budhanilkantha+44600/@27.7363949,85.3549152,17z/data=!3m1!4b1!4m6!3m5!1s0x39eb1be228ad518f:0x7eba57b2ac060cbd!8m2!3d27.7363949!4d85.356898!16s%2Fg%2F11jcj0y5xl?entry=ttu&g_ep=EgoyMDI1MDgyNS4wIKXMDSoASAFQAw%3D%3D',
       color: 'from-blue-400 to-cyan-400'
     },
     {
@@ -73,25 +73,31 @@ const Contact: React.FC = () => {
     {
       icon: <Github className="w-6 h-6" />,
       name: 'GitHub',
-      url: 'https://github.com/nareshShahi',
+      url: 'https://github.com/shahiNaresh11',
       color: 'hover:text-gray-400'
     },
     {
       icon: <Linkedin className="w-6 h-6" />,
       name: 'LinkedIn',
-      url: 'https://linkedin.com/in/naresh-shahi',
+      url: 'https://www.linkedin.com/in/naresh-shahi-176ba7320/',
       color: 'hover:text-blue-400'
     },
     {
-      icon: <Twitter className="w-6 h-6" />,
-      name: 'Twitter',
-      url: 'https://twitter.com/naresh_shahi',
+      icon: <Instagram className="w-6 h-6" />,
+      name: 'Instagram',
+      url: 'https://www.instagram.com/naresh.s_thakuri/',
       color: 'hover:text-cyan-400'
     },
+    //  {
+    //   icon: <Facebook className="w-6 h-6" />,
+    //   name: 'Facebook',
+    //   url: 'https://www.facebook.com/nareshshahi.thakuri.167',
+    //   color: 'hover:text-cyan-400'
+    // },
     {
       icon: <Mail className="w-6 h-6" />,
       name: 'Email',
-      url: 'mailto:naresh.shahi@example.com',
+      url: 'mailto:nareshshahi0011@gmail.com',
       color: 'hover:text-red-400'
     }
   ];
@@ -127,6 +133,7 @@ const Contact: React.FC = () => {
                 <a
                   key={info.title}
                   href={info.link}
+                  target="_blank"
                   className="group bg-gray-800/30 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-cyan-400/30 transition-all duration-300"
                 >
                   <div className={`inline-flex items-center justify-center w-12 h-12 rounded-lg bg-gradient-to-r ${info.color} mb-4 group-hover:scale-110 transition-transform duration-300`}>

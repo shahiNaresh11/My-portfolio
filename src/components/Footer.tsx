@@ -36,19 +36,19 @@ const Footer: React.FC<FooterProps> = ({ scrollToSection }) => {
   const socialLinks = [
     {
       icon: <Github size={22} />,
-      url: 'https://github.com/nareshShahi',
+      url: 'https://github.com/shahiNaresh11',
       name: 'GitHub',
       color: 'hover:bg-gray-700'
     },
     {
       icon: <Linkedin size={22} />,
-      url: 'https://linkedin.com/in/naresh-shahi',
+      url: 'https://www.linkedin.com/in/naresh-shahi-176ba7320/',
       name: 'LinkedIn',
       color: 'hover:bg-blue-600'
     },
     {
       icon: <Mail size={22} />,
-      url: 'mailto:naresh.shahi@example.com',
+      url: 'mailto:nareshshahi0011@gmail.com',
       name: 'Email',
       color: 'hover:bg-green-600'
     }

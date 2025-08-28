@@ -10,12 +10,23 @@ const Hero: React.FC<HeroProps> = ({ scrollToSection }) => {
   const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
 
   const roles = [
-'MERN Stack Developer',
-'React Specialist',
-'Node.js Developer',
-'Frontend Engineer'
+ 'React Developer',
+  'MERN Stack Developer', 
+  'Frontend Developer',
+  'JavaScript Developer'
 
   ];
+
+  // Function to handle CV download
+const handleDownloadCV = () => {
+  // Create a temporary anchor element
+  const link = document.createElement('a');
+  link.href = '/NareshShahi_Cv.pdf'; // Path to your CV in public folder
+  link.download = 'NareshShahi_CV.pdf'; // The filename for the downloaded file
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+};
 
   useEffect(() => {
     const typeRole = () => {
@@ -86,7 +97,7 @@ const Hero: React.FC<HeroProps> = ({ scrollToSection }) => {
 
           {/* Description */}
           <p className="text-lg sm:text-xl text-gray-400 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Passionate MERN Stack Developer with expertise in building scalable web applications. 
+            Passionate MERN Stack Developer with experience  in building scalable web applications. 
             I transform ideas into powerful digital solutions using modern technologies.
           </p>
 
@@ -100,10 +111,10 @@ const Hero: React.FC<HeroProps> = ({ scrollToSection }) => {
               <Calendar className="w-5 h-5 text-purple-400" />
               <span>3+ Years Experience</span>
             </div>
-            <div className="flex items-center space-x-2 text-gray-300">
-              <span className="w-5 h-5 bg-green-400 rounded-full flex items-center justify-center text-xs">6+</span>
-              <span>Projects Completed</span>
-            </div>
+       <div className="flex items-center space-x-2 text-gray-300">
+        <span className="w-6 h-6 bg-cyan-500 rounded-full flex items-center justify-center text-sm text-white font-bold">7+</span>
+        <span>Projects Completed</span>
+      </div>
           </div>
 
           {/* Social Links */}
@@ -143,10 +154,13 @@ const Hero: React.FC<HeroProps> = ({ scrollToSection }) => {
                 <ChevronDown className="ml-2 w-5 h-5 group-hover:translate-y-1 transition-transform" />
               </span>
             </button>
-            <button className="group border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-gray-900 px-8 py-4 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 flex items-center justify-center">
-              <Download size={18} className="mr-2 group-hover:animate-bounce" />
-              Download Resume
-            </button>
+            <button 
+  onClick={handleDownloadCV}
+  className="group border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-gray-900 px-8 py-4 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
+>
+  <Download size={18} className="mr-2 group-hover:animate-bounce" />
+  Download Resume
+</button>
           </div>
         </div>
       </div>
