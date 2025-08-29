@@ -120,7 +120,7 @@ const handleDownloadCV = () => {
           {/* Social Links */}
           <div className="flex justify-center space-x-6 mb-8">
             <a 
-              href="https://github.com/nareshShahi" 
+              href="https://github.com/shahiNaresh11" 
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-cyan-400 transition-all duration-300 transform hover:scale-110 hover:rotate-12"
@@ -128,7 +128,7 @@ const handleDownloadCV = () => {
               <Github size={28} />
             </a>
             <a 
-              href="https://linkedin.com/in/naresh-shahi" 
+              href="https://www.linkedin.com/in/naresh-shahi-176ba7320/" 
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-cyan-400 transition-all duration-300 transform hover:scale-110 hover:rotate-12"
@@ -136,7 +136,7 @@ const handleDownloadCV = () => {
               <Linkedin size={28} />
             </a>
             <a 
-              href="mailto:naresh.shahi@example.com"
+              href="mailto:nareshshahi0011@gmail.com"
               className="text-gray-400 hover:text-cyan-400 transition-all duration-300 transform hover:scale-110 hover:rotate-12"
             >
               <Mail size={28} />
