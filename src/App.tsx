@@ -21,7 +21,7 @@ function App() {
         }
         return false;
       });
-      
+
       if (currentSection) {
         setActiveSection(currentSection);
       }
@@ -39,12 +39,15 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-900 text-white overflow-x-hidden">
-      {/* Animated Background */}
+    <div className="min-h-screen bg-gray-900 text-white overflow-x-hidden relative">
+      {/* Enhanced Animated Background */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-cyan-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl opacity-10 animate-pulse" style={{ animationDelay: '4s' }}></div>
+        {/* Orb 1 */}
+        <div className="absolute -top-40 -right-40 w-96 h-96 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-floating"></div>
+        {/* Orb 2 */}
+        <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-floating-slow"></div>
+        {/* Orb 3 - Updated with darker colors */}
+        <div className="absolute top-1/2 left-1/3 w-80 h-80 bg-gradient-to-r from-purple-900 to-indigo-800 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-floating-fast"></div>
       </div>
 
       <Header activeSection={activeSection} scrollToSection={scrollToSection} />
@@ -66,26 +69,33 @@ function App() {
             transform: translateY(0);
           }
         }
-        
+
         .animate-fade-in-up {
           animation: fade-in-up 1s ease-out;
         }
-        
-        .animate-gradient {
-          background-size: 200% 200%;
-          animation: gradient 3s ease infinite;
-        }
-        
-        @keyframes gradient {
+
+        @keyframes floating {
           0% {
-            background-position: 0% 50%;
+            transform: translate(0, 0) scale(1);
           }
           50% {
-            background-position: 100% 50%;
+            transform: translate(30px, -40px) scale(1.05);
           }
           100% {
-            background-position: 0% 50%;
+            transform: translate(0, 0) scale(1);
           }
+        }
+
+        .animate-floating {
+          animation: floating 12s ease-in-out infinite;
+        }
+
+        .animate-floating-slow {
+          animation: floating 20s ease-in-out infinite;
+        }
+
+        .animate-floating-fast {
+          animation: floating 8s ease-in-out infinite;
         }
       `}</style>
     </div>

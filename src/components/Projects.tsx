@@ -13,7 +13,7 @@ interface Project {
   technologies: string[];
   features: string[];
   github: string;
-  live: string;
+  live?: string; // now optional
   status: string;
   duration: string;
   featured: boolean;
@@ -62,7 +62,6 @@ const Projects: React.FC = () => {
         'Interactive progress visualization'
       ],
       github: 'https://github.com/shahiNaresh11/student-progress-tracking.git',
-      live: 'https://student-tracker-demo.vercel.app',
       status: 'Completed',
       duration: '3 months',
       featured: true
@@ -86,7 +85,6 @@ const Projects: React.FC = () => {
         'Chat system for communication'
       ],
       github: 'https://github.com/nigamrai/Tournament-Registration-and-Opponent-Finder.git',
-      live: 'https://tournament-demo.vercel.app',
       status: 'Completed',
       duration: '2.5 months',
       featured: true
@@ -110,7 +108,6 @@ const Projects: React.FC = () => {
         'Admin analytics dashboard'
       ],
       github: 'https://github.com/shahiNaresh11/lms.git',
-      live: 'https://lms-demo.vercel.app',
       status: 'Completed',
       duration: '3 months',
       featured: false
@@ -134,7 +131,6 @@ const Projects: React.FC = () => {
         'Multi-payment options'
       ],
       github: 'https://github.com/xiring-xrp/4th-sem-project.git',
-      live: 'https://tailor-demo.vercel.app',
       status: 'Completed',
       duration: '2 months',
       featured: false
@@ -280,14 +276,6 @@ const Projects: React.FC = () => {
                     >
                       <Github size={18} />
                     </a>
-                    <a 
-                      href={project.live}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="p-3 bg-gray-900/80 backdrop-blur-sm rounded-full text-white hover:bg-purple-500 transition-colors duration-300"
-                    >
-                      <ExternalLink size={18} />
-                    </a>
                   </div>
                 </div>
               </div>
@@ -346,15 +334,6 @@ const Projects: React.FC = () => {
                     <Github size={16} className="mr-2 group-hover:scale-110 transition-transform duration-300" />
                     View Code
                   </a>
-                  <a 
-                    href={project.live}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex-1 flex items-center justify-center px-4 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg text-white hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 group"
-                  >
-                    <ExternalLink size={16} className="mr-2 group-hover:scale-110 transition-transform duration-300" />
-                    Live Demo
-                  </a>
                 </div>
               </div>
             </div>
@@ -389,7 +368,7 @@ const Projects: React.FC = () => {
         {/* Call to Action */}
         <div className="text-center">
           <div className="bg-gray-800 rounded-2xl p-8 border border-gray-700 hover:border-cyan-400/50 transition-all duration-300">
-            <h3 className="text-3xl font-bold text-white mb-6">Have a Project in Mind?</h3>
+            <h3 className="text-3xl font-bold text-white mb-6">Have an Innovative Idea? Let's Create Magic!</h3>
             <p className="text-lg text-gray-400 mb-8 max-w-2xl mx-auto">
               Let's collaborate to turn your ideas into exceptional digital experiences.
             </p>

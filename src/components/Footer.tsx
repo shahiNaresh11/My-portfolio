@@ -75,44 +75,44 @@ const Footer: React.FC<FooterProps> = ({ scrollToSection }) => {
         </div>
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20">
         {/* Main Content Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 mb-12 md:mb-16">
           {/* Enhanced Brand Section */}
-          <div className="lg:col-span-2 space-y-8">
+          <div className="lg:col-span-2 space-y-6 md:space-y-8">
             <div className="flex items-center space-x-4 group">
               <div className="relative">
-                <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 via-purple-500 to-pink-500 rounded-2xl flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform duration-300">
-                  <Code2 className="w-9 h-9 text-white" />
+                <div className="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-br from-cyan-400 via-purple-500 to-pink-500 rounded-2xl flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform duration-300">
+                  <Code2 className="w-6 h-6 md:w-9 md:h-9 text-white" />
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-br from-cyan-400 via-purple-500 to-pink-500 rounded-2xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300"></div>
               </div>
               <div>
-                <h3 className="text-3xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+                <h3 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
                   Naresh Shahi
                 </h3>
                 <div className="flex items-center space-x-2">
-                  <p className="text-lg text-gray-300">MERN Stack Developer</p>
+                  <p className="text-base md:text-lg text-gray-300">MERN Stack Developer</p>
                   <Sparkles className="w-4 h-4 text-yellow-400 animate-pulse" />
                 </div>
               </div>
             </div>
             
-            <div className="space-y-6">
-              <p className="text-lg text-gray-300 leading-relaxed max-w-lg">
+            <div className="space-y-4 md:space-y-6">
+              <p className="text-base md:text-lg text-gray-300 leading-relaxed max-w-lg">
                 Passionate about creating innovative web solutions using modern technologies. 
                 Transforming ideas into powerful digital experiences that make a difference.
               </p>
               
               {/* Enhanced Social Links */}
-              <div className="flex space-x-4">
+              <div className="flex space-x-3 md:space-x-4">
                 {socialLinks.map((social) => (
                   <a
                     key={social.name}
                     href={social.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`group relative p-4 bg-gray-800/60 backdrop-blur-sm rounded-2xl border border-gray-600/50 text-gray-300 ${social.color} transition-all duration-300 hover:scale-110 hover:shadow-lg hover:border-transparent`}
+                    className={`group relative p-3 md:p-4 bg-gray-800/60 backdrop-blur-sm rounded-2xl border border-gray-600/50 text-gray-300 ${social.color} transition-all duration-300 hover:scale-110 hover:shadow-lg hover:border-transparent`}
                     title={social.name}
                   >
                     {social.icon}
@@ -124,17 +124,17 @@ const Footer: React.FC<FooterProps> = ({ scrollToSection }) => {
           </div>
 
           {/* Enhanced Quick Links */}
-          <div className="space-y-8">
-            <h4 className="text-2xl font-bold text-white flex items-center space-x-2">
+          <div className="space-y-6 md:space-y-8">
+            <h4 className="text-xl md:text-2xl font-bold text-white flex items-center space-x-2">
               <span>Quick Links</span>
-              <div className="w-8 h-0.5 bg-gradient-to-r from-cyan-400 to-transparent"></div>
+              <div className="w-6 md:w-8 h-0.5 bg-gradient-to-r from-cyan-400 to-transparent"></div>
             </h4>
-            <div className="space-y-4">
+            <div className="space-y-3 md:space-y-4">
               {quickLinks.map((link, index) => (
                 <button
                   key={link.name}
                   onClick={() => scrollToSection(link.id)}
-                  className="group flex items-center space-x-3 text-lg text-gray-300 hover:text-cyan-400 transition-all duration-300 transform hover:translate-x-2"
+                  className="group flex items-center space-x-3 text-base md:text-lg text-gray-300 hover:text-cyan-400 transition-all duration-300 transform hover:translate-x-2"
                   style={{ animationDelay: `${index * 100}ms` }}
                 >
                   <div className="w-2 h-2 bg-gray-600 rounded-full group-hover:bg-cyan-400 transition-colors duration-300"></div>
@@ -145,19 +145,19 @@ const Footer: React.FC<FooterProps> = ({ scrollToSection }) => {
           </div>
 
           {/* Enhanced Services */}
-          <div className="space-y-8">
-            <h4 className="text-2xl font-bold text-white flex items-center space-x-2">
+          <div className="space-y-6 md:space-y-8">
+            <h4 className="text-xl md:text-2xl font-bold text-white flex items-center space-x-2">
               <span>Services</span>
-              <div className="w-8 h-0.5 bg-gradient-to-r from-purple-400 to-transparent"></div>
+              <div className="w-6 md:w-8 h-0.5 bg-gradient-to-r from-purple-400 to-transparent"></div>
             </h4>
-            <div className="space-y-4">
+            <div className="space-y-3 md:space-y-4">
               {services.map((service, index) => (
                 <div
                   key={service.name}
-                  className="group flex items-center space-x-3 text-lg text-gray-300 hover:text-purple-400 transition-all duration-300 cursor-default"
+                  className="group flex items-center space-x-3 text-base md:text-lg text-gray-300 hover:text-purple-400 transition-all duration-300 cursor-default"
                   style={{ animationDelay: `${index * 100}ms` }}
                 >
-                  <span className="text-xl group-hover:scale-125 transition-transform duration-300">
+                  <span className="text-lg md:text-xl group-hover:scale-125 transition-transform duration-300">
                     {service.icon}
                   </span>
                   <span className="group-hover:translate-x-1 transition-transform duration-300">
@@ -170,21 +170,24 @@ const Footer: React.FC<FooterProps> = ({ scrollToSection }) => {
         </div>
 
         {/* Enhanced Bottom Section */}
-        <div className="border-t border-gray-700/50 pt-12">
-          <div className="flex flex-col md:flex-row  items-center justify-between space-y-6 md:space-y-0">
-            <div className=" flex ms-80 space-x-2 text-lg text-gray-400">
-              <span>© {currentYear} Naresh Shahi. Built with</span>
-              <Heart className="w-5 h-5 text-red-400 animate-pulse" />
-              <span>using React & Tailwind CSS</span>
+        <div className="border-t border-gray-700/50 pt-8 md:pt-12">
+          <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
+            <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-2 text-sm md:text-base text-gray-400">
+              <span>© {currentYear} Naresh Shahi.</span>
+              <span className="flex items-center">
+                <span>Built with</span>
+                <Heart className="w-4 h-4 md:w-5 md:h-5 text-red-400 animate-pulse mx-1" />
+                <span>using React & Tailwind CSS</span>
+              </span>
             </div>
             
             <button
               onClick={scrollToTop}
-              className="group flex items-center space-x-3 text-lg text-gray-400 hover:text-cyan-400 transition-all duration-300"
+              className="group flex items-center space-x-2 md:space-x-3 text-sm md:text-lg text-gray-400 hover:text-cyan-400 transition-all duration-300"
             >
               <span>Back to top</span>
-              <div className="p-3 bg-gray-800/60 backdrop-blur-sm rounded-xl border border-gray-600/50 group-hover:border-cyan-400/50 group-hover:bg-cyan-400/10 transition-all duration-300 group-hover:scale-110">
-                <ArrowUp size={18} className="group-hover:animate-bounce" />
+              <div className="p-2 md:p-3 bg-gray-800/60 backdrop-blur-sm rounded-xl border border-gray-600/50 group-hover:border-cyan-400/50 group-hover:bg-cyan-400/10 transition-all duration-300 group-hover:scale-110">
+                <ArrowUp size={16} className="md:w-18 group-hover:animate-bounce" />
               </div>
             </button>
           </div>
@@ -195,13 +198,13 @@ const Footer: React.FC<FooterProps> = ({ scrollToSection }) => {
       {showScrollTop && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-8 right-8 p-4 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 rounded-full text-white shadow-2xl hover:shadow-cyan-500/25 transition-all duration-300 transform hover:scale-110 z-50 animate-bounce"
+          className="fixed bottom-6 right-6 md:bottom-8 md:right-8 p-3 md:p-4 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 rounded-full text-white shadow-2xl hover:shadow-cyan-500/25 transition-all duration-300 transform hover:scale-110 z-50 animate-bounce"
           title="Scroll to top"
           style={{
             animation: 'fadeInUp 0.5s ease-out, float 3s ease-in-out infinite 0.5s'
           }}
         >
-          <ArrowUp size={20} />
+          <ArrowUp size={18} className="md:w-20" />
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 rounded-full blur-lg opacity-50 -z-10"></div>
         </button>
       )}

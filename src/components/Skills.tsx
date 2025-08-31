@@ -100,7 +100,7 @@ const Skills: React.FC = () => {
     },
     {
       icon: <Code className="w-6 h-6" />,
-      title: '70,000+ Lines of Code',
+      title: '1,00,000+ Lines of Code',
       description: 'Written across various projects'
     },
     {

@@ -56,7 +56,7 @@ const Contact: React.FC = () => {
     {
       icon: <MapPin className="w-6 h-6" />,
       title: 'Location',
-      value: 'Kathmandu, Nepal',
+      value: 'Kathamandu, Nepal',
       link: 'https://www.google.com/maps/place/Kapan,+Budhanilkantha+44600/@27.7363949,85.3549152,17z/data=!3m1!4b1!4m6!3m5!1s0x39eb1be228ad518f:0x7eba57b2ac060cbd!8m2!3d27.7363949!4d85.356898!16s%2Fg%2F11jcj0y5xl?entry=ttu&g_ep=EgoyMDI1MDgyNS4wIKXMDSoASAFQAw%3D%3D',
       color: 'from-blue-400 to-cyan-400'
     },
