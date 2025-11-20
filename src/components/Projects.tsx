@@ -147,7 +147,7 @@ const Projects: React.FC = () => {
         "Mobile-responsive design",
         "Admin analytics dashboard",
       ],
-      github: "",
+      github: "https://github.com/shahiNaresh11",
       status: "Completed",
       duration: "3 months",
       featured: false,
